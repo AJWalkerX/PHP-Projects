@@ -1,0 +1,1 @@
+<!-- Burada anket olucak ve anket tamamlandıktan sonra kullanıcı index.phpye geri yönlendirilecek -->

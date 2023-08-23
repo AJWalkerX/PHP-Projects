@@ -1,0 +1,61 @@
+-- Database'i oluşturan kod.
+CREATE DATABASE blog DEFAULT CHARACTER SET utf8;
+GRANT ALL ON blog.* TO 'admin'@'localhost' IDENTIFIED BY 'admin';
+
+--Users table
+CREATE TABLE Users(
+	user_id INT AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(255) NOT NULL,
+    email  VARCHAR(255) NOT null,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Profile table
+CREATE TABLE profile (
+  profile_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  gender ENUM('Male', 'Female', 'Other'),
+  birth_date DATE,  
+  about TEXT,
+  FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--Profile photos table
+CREATE TABLE profile_photos (
+  pic_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  pic_url VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Articles table
+CREATE TABLE Articles (
+  article_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  title VARCHAR(255),
+  content TEXT,
+  subheading VARCHAR(255),
+  content_2 TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES Users(user_id)  ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--Article photos table
+CREATE TABLE Article_pictures (
+  art_pic_id INT PRIMARY KEY AUTO_INCREMENT,
+  article_id INT NOT NULL,
+  art_pic_url VARCHAR(255),
+  FOREIGN KEY (article_id) REFERENCES Articles(article_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--Article Catagories table
+CREATE TABLE Catagories(
+  cat_id INT PRIMARY KEY AUTO_INCREMENT,
+  article_id INT NOT NULL,
+  Catagories VARCHAR(255),
+  FOREIGN KEY (article_id) REFERENCES Articles(article_id) ON DELETE CASCADE ON UPDATE CASCADE
+);

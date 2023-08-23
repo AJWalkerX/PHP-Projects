@@ -1,0 +1,1 @@
+<!-- Kullanıcı çıkış yapıcak ve index.php'ye geri yönlendirelecek -->

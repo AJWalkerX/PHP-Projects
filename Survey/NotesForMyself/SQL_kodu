@@ -1,0 +1,5 @@
+CREATE DATABASE surveys DEFAULT CHARACTER SET utf8 ;
+     GRANT ALL ON surveys.* TO 'admin'@'localhost' IDENTIFIED BY 'admin';
+
+
+--Creting tables...

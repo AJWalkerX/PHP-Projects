@@ -1,0 +1,42 @@
+[
+    {
+        "id": 7,
+        "name": "Kurtis Weissnat",
+        "username": "Elwyn.Skiles",
+        "email": "Telly.Hoeger@billy.biz",
+        "phone": "210.067.6132",
+        "website": "elvis.io"
+    },
+    {
+        "id": 9,
+        "name": "Glenna Reichert",
+        "username": "Delphine",
+        "email": "Chaim_McDermott@dana.io",
+        "phone": "(775)976-6794 x41206",
+        "website": "conrad.com"
+    },
+    {
+        "id": 10,
+        "name": "Clementina DuBuque",
+        "username": "Moriah.Stanton",
+        "email": "Rey.Padberg@karina.biz",
+        "phone": "024-648-3804",
+        "website": "ambrose.net"
+    },
+    {
+        "name": "Alex",
+        "username": "Happydsad",
+        "email": "a@a.com",
+        "phone": "1",
+        "website": "",
+        "id": 1980585
+    },
+    {
+        "name": "dsaddas",
+        "username": "dasdads",
+        "email": "dsada@dasd.com",
+        "phone": "123123",
+        "website": "",
+        "id": 1573649
+    }
+]

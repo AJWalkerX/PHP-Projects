@@ -1,0 +1,44 @@
+-- Database'i oluşturan kod.
+CREATE DATABASE blog DEFAULT CHARACTER SET utf8;
+GRANT ALL ON blog.* TO 'admin'@'localhost' IDENTIFIED BY 'admin';
+
+--Creating Tables
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE articles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT,
+    user_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    content TEXT,
+    article_id INT,
+    user_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (article_id) REFERENCES articles(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE profiles (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  gender ENUM('Male', 'Female', 'Other'),
+  profile_picture VARCHAR(255), -- Çalışmazsa text yap
+  about TEXT,
+  phone_number VARCHAR(20),
+  facebook VARCHAR(255),
+  twitter VARCHAR(255),
+  instagram VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+);

@@ -1,0 +1,1 @@
+<!-- kullanıcı burada anketini düzenleyebilecek ve tamamladıktan sonra view.php ye geri dönücek -->

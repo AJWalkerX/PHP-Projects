@@ -1,0 +1,47 @@
+Şu anda tek bir anket yapıyorum fakat bunu tamamladıktan sonra anket sayısını artıracağım onun için SQL server ona göre yapılmalı
+(Yeni bir databe de oluşturulabilir.)
+
+Sornaki aşamalar için:
+        Kullanıcı çıkış yaptıktan sonra yaptığı tüm anketleri ve kullanıcı bilgilerini silebilmek için bir kod yazabilirim.
+
+
+Food product tablo içeriği:
+    3 soru olucak bir tanesi radio button diğeri sellect buton bir tanesi de text olucak şekilde ve bir tane de comment olucak.
+
+web sitenin şeması
+
+--index.php
+        Kullanıcı Giriş yapmadan önce:
+        Kullanıcının girişini sağlayacak login linki olucak
+        kullanıcı girişi olmadan survey linkine girilmeye çalışılması için bir link olucak.
+        
+        eğer veritabanında veri varsa
+        kullacının ismini ve anket sırasında yaptığı yorumu tablo olarak göstereceğim
+        veritabanında veri yok ise: henüz girilmiş bir anket yok.
+
+        eğer kullanıcı girişi yapıldıysa:
+         kullanıcının çıkış yapabilmesi için logout.php linki
+        Surveye yönlendiren bir link 
+        
+        eğer veritabanında veri varsa
+        kullacının ismini ve anket sırasında yaptığı yorumu tablo olarak göstereceğim
+        veritabanında veri yok ise: henüz girilmiş bir anket yok.
+                -view.php yönlendirilen bir link
+                -edit.php ve delete.php linkleri
+
+--login.php
+
+email ve şifre doğru girildikten sonra 
+kullanıcı index.php sayfasına geri yönlendirilecek.
+
+eğer kullanıcı email adresi ve şifresi doğru girilmezse flash mesaj ile kullanıcıya
+hatanın bilgisi verilecek. 
+
+...
+
+SQL table kısmını tamamlamam gerekiyor.
+
+
+Şimdilik tamamlanan aşamalar:
+        -database oluşturuldu.
+        -signup.php tamamlandı.

@@ -1,0 +1,1 @@
+<!-- kullanıcı burada anketini silecek ve index.php'ye geri yönlendirilecek. -->
